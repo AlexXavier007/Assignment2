@@ -1,0 +1,125 @@
+TASK 0
+myString = "hello! \n welcome to Python class on STRINGS. \n This is our 2nd L@B."
+print (myString)
+
+TASK 1
+a = "Python,lab assignment"
+b = a.split(",")
+print(b)
+a = "      Python lab assignment    "
+print(a.strip())
+a = "Python lab assignment"
+print(a.replace("a", "@"))
+a = "Python lab assignment"
+print(len(a))
+a = "Python lab assignment"
+print(type(a))
+
+print ("{},lab assignment"
+      .format("python,"))
+a = "Python lab assignment 2"
+print("Hello, %s!" % a)
+
+TASK2
+
+myString = "hello! \n welcome to Python class on STRINGS. \n This is our 2nd L@B."
+x = myString.index("2nd")
+print(x)
+x = myString.index("@")
+print(x)
+
+
+
+myString = "hello! \n welcome to Python class on STRINGS. \n This is our 2nd L@B."
+x = myString.index("STRINGS")
+print(x>30 or x<60)
+x = myString.index("STRINGS")
+print(x>60 or x<25)
+
+
+myString = "hello! \n welcome to Python class on STRINGS. \n This is our 2nd L@B."
+print("C++" in myString)
+print("class" in myString)
+print("C++" not in myString)
+print("class" not in myString)
+
+
+x = myString
+y = "Hello! \nWelcome to Python class on STRINGS. \nThis is our 2nd L@B."
+print(myString is x)
+print(myString is y)
+y = myString
+print(myString is y)
+x = myString
+y = "Hello! \nWelcome to Python class on STRINGS. \nThis is our 2nd L@B."
+print(myString is not x)
+print(myString is not y)
+y = myString
+print(myString is not y)
+
+
+
+myString = "hello! \n welcome to Python class on STRINGS. \n This is our 2nd L@B."
+x = myString.startswith("to")
+y = "\n\nDoes the String starts with 'to'? \n{} \nNo!! The String doesn't start with 'to'"
+print(myString + y.format(x))
+
+
+TASK 3
+from string import *
+from random import choice
+print("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+print("\n\n\t\tWelcome to the Name, Place, Animal, Thing Game!")
+print("\n\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+n=2
+#List to check which player won by using 1's and 0's
+check=[]
+
+letter=choice(ascii_letters)
+for i in range(0,n):
+	#print("Player{}\n".format(i+1))
+	print("\n\nPlayer{}'s turn".format(i+1))
+	name=input("Enter a name that starts with {}: ".format(letter))
+	if(name[0].lower()==letter.lower()):
+		thing=input("Enter a thing that starts with {}: ".format(letter))
+		if(thing[0].lower()==letter.lower()):
+			place=input("Enter a place that starts with {}: ".format(letter))
+			if(place[0].lower()==letter.lower()):
+				animal=input("Name an animal that starts with {}: ".format(letter))
+				if(animal[0].lower()==letter.lower()):
+					#print("Hooray!!! Player{} Passed".format(i+1))
+					check.append(1)
+				else:
+					#print("Player{} failed!!!".format(i+1))
+					check.append(0)
+			else:
+				#print("Player{} failed!!!".format(i+1))
+				check.append(0)
+		else:
+			#print("Player{} failed!!!".format(i+1))
+			check.append(0)
+	else:
+		#print("Player{} failed!!!".format(i+1))
+		check.append(0)
+if((check[0]==1) and (check[1]==1)):
+	print("\n\t\t\tIt's a draw! Both players win!")
+elif((check[0]==1) and (check[1]==0)):
+	print("\n\t\t\t\tPLAYER1 WINS!!!")
+elif((check[0]==0) and (check[1]==1)):
+	print("\n\t\t\t\tPLAYER2 WINS!!!")
+else:
+	print("\n\t\t\t\tBOTH LOSE!")
+print("\n\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+print("\n\n\t\t\tHOPE YOU ENJOYED THE GAME!")
+print("\n\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+
+TASK 4
+color = input("Enter a color:")
+pluralNoun = ("Enter a plural noun:")
+celebrity = input("Enter a celebrity:")
+
+print("Roses are",color)
+print(pluralNoun + "are blue")
+print("I love",celebrity)
+
+
